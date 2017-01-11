@@ -1,0 +1,68 @@
+{
+  "name": "generator-clone-that",
+  "version": "1.0.0",
+  "description": "A teen tiny companion to clone a Github project (e.g. angular2-preboot). Created by @katallaxie.",
+  "homepage": "https://github.com/katallaxie/generator-clone-that",
+  "bugs": {
+    "url": "https://github.com/katallaxie/generator-clone-that/issues"
+  },
+  "author": {
+    "name": "Sebastian Döll",
+    "email": "sebastian@katallaxie.me"
+  },
+  "files": [
+    "app"
+  ],
+  "main": "app/index",
+  "keywords": [
+    "yeoman-generator",
+    "generator",
+    "angular",
+    "typescript"
+  ],
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "chalk": "^1.1.3",
+    "clui": "^0.3.1",
+    "colors": "^1.1.2",
+    "parse-github-url": "^1.0.0",
+    "promise": "^7.1.1",
+    "rimraf": "^2.5.4",
+    "underscore.string": "^3.3.4",
+    "yeoman-generator": "^1.0.1",
+    "yeoman-remote": "^1.0.1",
+    "yosay": "^1.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.16.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-node": "^5.1.1",
+    "del": "^2.2.1",
+    "eslint": "^3.12.2",
+    "jest": "^18.1.0",
+    "jest-cli": "^18.1.0",
+    "yeoman-test": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/katallaxie/generator-clone-that.git"
+  },
+  "scripts": {
+    "build": "babel src -d app",
+    "watch": "babel src -d app --watch",
+    "prepublish": "npm run build",
+    "test": "eslint 'src/**/*.js' && jest",
+    "update": "git pull --recurse-submodules"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "engines": {
+    "node": ">=6.9.1",
+    "npm": ">=3"
+  },
+  "license": "MIT"
+}
